@@ -14,6 +14,8 @@
 		303520731C88EC4E00436351 /* MHMessageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MHMessageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		303520761C88EC4E00436351 /* MHMessageKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHMessageKit.h; sourceTree = "<group>"; };
 		303520781C88EC4E00436351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		303520AC1C88ED6000436351 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		303520AD1C88ED6000436351 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +32,8 @@
 		303520691C88EC4E00436351 = {
 			isa = PBXGroup;
 			children = (
+				303520AD1C88ED6000436351 /* README.md */,
+				303520AC1C88ED6000436351 /* LICENSE.md */,
 				303520751C88EC4E00436351 /* MHMessageKit */,
 				303520741C88EC4E00436351 /* Products */,
 			);
