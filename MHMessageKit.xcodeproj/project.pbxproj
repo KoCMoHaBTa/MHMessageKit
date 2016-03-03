@@ -8,7 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		303520771C88EC4E00436351 /* MHMessageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 303520761C88EC4E00436351 /* MHMessageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		303520CA1C88EE6500436351 /* MHMessageKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303520C91C88EE6500436351 /* MHMessageKitTests.swift */; };
+		303520CC1C88EE6500436351 /* MHMessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303520731C88EC4E00436351 /* MHMessageKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		303520CD1C88EE6500436351 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3035206A1C88EC4E00436351 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 303520721C88EC4E00436351;
+			remoteInfo = MHMessageKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		303520731C88EC4E00436351 /* MHMessageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MHMessageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -16,6 +28,9 @@
 		303520781C88EC4E00436351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		303520AC1C88ED6000436351 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		303520AD1C88ED6000436351 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		303520C71C88EE6500436351 /* MHMessageKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHMessageKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		303520C91C88EE6500436351 /* MHMessageKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHMessageKitTests.swift; sourceTree = "<group>"; };
+		303520CB1C88EE6500436351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +38,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		303520C41C88EE6500436351 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303520CC1C88EE6500436351 /* MHMessageKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +58,7 @@
 				303520AD1C88ED6000436351 /* README.md */,
 				303520AC1C88ED6000436351 /* LICENSE.md */,
 				303520751C88EC4E00436351 /* MHMessageKit */,
+				303520C81C88EE6500436351 /* MHMessageKitTests */,
 				303520741C88EC4E00436351 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				303520731C88EC4E00436351 /* MHMessageKit.framework */,
+				303520C71C88EE6500436351 /* MHMessageKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +79,15 @@
 				303520781C88EC4E00436351 /* Info.plist */,
 			);
 			path = MHMessageKit;
+			sourceTree = "<group>";
+		};
+		303520C81C88EE6500436351 /* MHMessageKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				303520C91C88EE6500436351 /* MHMessageKitTests.swift */,
+				303520CB1C88EE6500436351 /* Info.plist */,
+			);
+			path = MHMessageKitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,16 +122,38 @@
 			productReference = 303520731C88EC4E00436351 /* MHMessageKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		303520C61C88EE6500436351 /* MHMessageKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 303520CF1C88EE6500436351 /* Build configuration list for PBXNativeTarget "MHMessageKitTests" */;
+			buildPhases = (
+				303520C31C88EE6500436351 /* Sources */,
+				303520C41C88EE6500436351 /* Frameworks */,
+				303520C51C88EE6500436351 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				303520CE1C88EE6500436351 /* PBXTargetDependency */,
+			);
+			name = MHMessageKitTests;
+			productName = MHMessageKitTests;
+			productReference = 303520C71C88EE6500436351 /* MHMessageKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3035206A1C88EC4E00436351 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Milen Halachev";
 				TargetAttributes = {
 					303520721C88EC4E00436351 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					303520C61C88EE6500436351 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
@@ -115,12 +171,20 @@
 			projectRoot = "";
 			targets = (
 				303520721C88EC4E00436351 /* MHMessageKit */,
+				303520C61C88EE6500436351 /* MHMessageKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		303520711C88EC4E00436351 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		303520C51C88EE6500436351 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -137,7 +201,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		303520C31C88EE6500436351 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303520CA1C88EE6500436351 /* MHMessageKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		303520CE1C88EE6500436351 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 303520721C88EC4E00436351 /* MHMessageKit */;
+			targetProxy = 303520CD1C88EE6500436351 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		303520791C88EC4E00436351 /* Debug */ = {
@@ -261,6 +341,28 @@
 			};
 			name = Release;
 		};
+		303520D01C88EE6500436351 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MHMessageKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.MHMessageKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		303520D11C88EE6500436351 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MHMessageKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.MHMessageKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -278,6 +380,14 @@
 			buildConfigurations = (
 				3035207C1C88EC4E00436351 /* Debug */,
 				3035207D1C88EC4E00436351 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		303520CF1C88EE6500436351 /* Build configuration list for PBXNativeTarget "MHMessageKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				303520D01C88EE6500436351 /* Debug */,
+				303520D11C88EE6500436351 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
