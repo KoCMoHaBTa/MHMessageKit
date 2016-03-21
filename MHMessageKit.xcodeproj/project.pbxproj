@@ -10,6 +10,7 @@
 		303520771C88EC4E00436351 /* MHMessageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 303520761C88EC4E00436351 /* MHMessageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		303520CA1C88EE6500436351 /* MHMessageKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303520C91C88EE6500436351 /* MHMessageKitTests.swift */; };
 		303520CC1C88EE6500436351 /* MHMessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303520731C88EC4E00436351 /* MHMessageKit.framework */; };
+		303867F91CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303867F81CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift */; };
 		303D1BCC1C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC71C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift */; };
 		303D1BCD1C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC81C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift */; };
 		303D1BCE1C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC91C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift */; };
@@ -49,6 +50,7 @@
 		303520C71C88EE6500436351 /* MHMessageKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHMessageKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		303520C91C88EE6500436351 /* MHMessageKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHMessageKitTests.swift; sourceTree = "<group>"; };
 		303520CB1C88EE6500436351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		303867F81CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+MessagePublisher.swift"; sourceTree = "<group>"; };
 		303D1BC71C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotification+NSNotificationMessage.swift"; sourceTree = "<group>"; };
 		303D1BC81C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+NSNotificationMessage+WeakObserver.swift"; sourceTree = "<group>"; };
 		303D1BC91C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+NSNotificationMessage.swift"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				303D1BD41C88F4F000F7FB6C /* NSNotificationMessageSubscription.swift */,
 				303D1BD31C88F4F000F7FB6C /* NSNotificationCenter+MessageSubscriber.swift */,
 				303D1BD51C88F4F000F7FB6C /* NSNotificationQueue+MessagePublisher.swift */,
+				303867F81CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				303D1BE71C88F4F000F7FB6C /* StaticWeakSubscriptionContainer.swift in Sources */,
 				303D1BE31C88F4F000F7FB6C /* MessageSubscriber.swift in Sources */,
 				303D1BCE1C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift in Sources */,
+				303867F91CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift in Sources */,
 				303D1BCC1C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift in Sources */,
 				303D1BCF1C88F4E900F7FB6C /* NSNotificationMessage.swift in Sources */,
 			);

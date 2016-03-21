@@ -48,7 +48,7 @@ public extension NSNotificationCenter {
 public extension NSNotificationCenter {
     
     ///Posts a given message to the receiver.
-    public func postMessage(message: NSNotificationMessage, sender: AnyObject?) {
+    public func postMessage(message: NSNotificationMessage, sender: AnyObject? = nil) {
         
         let notification = NSNotification(message: message, object: sender)
         self.postNotification(notification)
