@@ -10,7 +10,7 @@ import Foundation
 
 extension NSNotificationQueue: MessagePublisher {
     
-    public func publishMessage<M where M : Message>(message: M) {
+    public func publishMessage(message: Message) {
         
         guard
             let message = message as? NSNotificationMessage

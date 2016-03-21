@@ -10,5 +10,5 @@ import Foundation
 
 public protocol MessagePublisher {
     
-    func publishMessage<M where M: Message>(message: M)
+    func publishMessage(message: Message)
 }
