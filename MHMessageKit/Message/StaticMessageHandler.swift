@@ -10,7 +10,7 @@ import Foundation
 
 public protocol StaticMessageHandler {
     
-    typealias RegistrationInput
+    associatedtype RegistrationInput
         
     static func registerSubscriptions<S where S: MessageSubscriber>(subscriber: S, input: RegistrationInput)
     static func unregisterSubscriptions<S where S: MessageSubscriber>(subscriber: S)
