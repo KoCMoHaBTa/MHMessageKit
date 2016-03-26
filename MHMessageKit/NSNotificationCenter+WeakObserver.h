@@ -10,7 +10,7 @@
 
 @interface NSNotificationCenter (WeakObserver)
 
--(void)addWeakObserver:(id)observer selector:(SEL)aSelector name:(NSString *)aName object:(id)anObject;
-- (id<NSObject>)addWeakObserverForName:(NSString *)name object:(id)obj queue:(NSOperationQueue *)queue usingBlock:(void (^)(NSNotification *note))block NS_AVAILABLE(10_6, 4_0);
+-(void)addWeakObserver:(nonnull id)observer selector:(nonnull SEL)aSelector name:(nullable NSString *)aName object:(nullable id)anObject;
+- (nonnull id<NSObject>)addWeakObserverForName:(nullable NSString *)name object:(nullable id)obj queue:(nullable NSOperationQueue *)queue usingBlock:(nonnull void (^)(NSNotification * _Nonnull note))block NS_AVAILABLE(10_6, 4_0);
 
 @end

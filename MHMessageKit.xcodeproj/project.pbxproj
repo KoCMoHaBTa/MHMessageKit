@@ -10,25 +10,25 @@
 		303520771C88EC4E00436351 /* MHMessageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 303520761C88EC4E00436351 /* MHMessageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		303520CA1C88EE6500436351 /* MHMessageKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303520C91C88EE6500436351 /* MHMessageKitTests.swift */; };
 		303520CC1C88EE6500436351 /* MHMessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303520731C88EC4E00436351 /* MHMessageKit.framework */; };
-		303867F91CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303867F81CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift */; };
 		303D1BCC1C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC71C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift */; };
-		303D1BCD1C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC81C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift */; };
-		303D1BCE1C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC91C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift */; };
 		303D1BCF1C88F4E900F7FB6C /* NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BCA1C88F4E900F7FB6C /* NSNotificationMessage.swift */; };
 		303D1BD01C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BCB1C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift */; };
-		303D1BDE1C88F4F000F7FB6C /* NSNotificationCenter+MessageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD31C88F4F000F7FB6C /* NSNotificationCenter+MessageSubscriber.swift */; };
-		303D1BDF1C88F4F000F7FB6C /* NSNotificationMessageSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD41C88F4F000F7FB6C /* NSNotificationMessageSubscription.swift */; };
-		303D1BE01C88F4F000F7FB6C /* NSNotificationQueue+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD51C88F4F000F7FB6C /* NSNotificationQueue+MessagePublisher.swift */; };
-		303D1BE11C88F4F000F7FB6C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD61C88F4F000F7FB6C /* Message.swift */; };
-		303D1BE21C88F4F000F7FB6C /* MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD71C88F4F000F7FB6C /* MessagePublisher.swift */; };
-		303D1BE31C88F4F000F7FB6C /* MessageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD81C88F4F000F7FB6C /* MessageSubscriber.swift */; };
-		303D1BE41C88F4F000F7FB6C /* MessageSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD91C88F4F000F7FB6C /* MessageSubscription.swift */; };
-		303D1BE51C88F4F000F7FB6C /* StaticMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDA1C88F4F000F7FB6C /* StaticMessageHandler.swift */; };
-		303D1BE61C88F4F000F7FB6C /* StaticSubscriptionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDB1C88F4F000F7FB6C /* StaticSubscriptionContainer.swift */; };
-		303D1BE71C88F4F000F7FB6C /* StaticWeakSubscriptionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDC1C88F4F000F7FB6C /* StaticWeakSubscriptionContainer.swift */; };
-		303D1BE81C88F4F000F7FB6C /* WeakMessageSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDD1C88F4F000F7FB6C /* WeakMessageSubscription.swift */; };
 		303D1BF41C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BF21C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.m */; };
 		303D1BF51C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 303D1BF31C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30DF3A501CA7186800E6068A /* NSNotificationCenter+NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC91C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift */; };
+		30DF3A631CA71A0600E6068A /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC81C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift */; };
+		30DF3A641CA71BE400E6068A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD61C88F4F000F7FB6C /* Message.swift */; };
+		30DF3A651CA71BE400E6068A /* MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD71C88F4F000F7FB6C /* MessagePublisher.swift */; };
+		30DF3A661CA71BE400E6068A /* MessageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD81C88F4F000F7FB6C /* MessageSubscriber.swift */; };
+		30DF3A671CA71BE400E6068A /* MessageSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD91C88F4F000F7FB6C /* MessageSubscription.swift */; };
+		30DF3A681CA71BE400E6068A /* WeakMessageSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDD1C88F4F000F7FB6C /* WeakMessageSubscription.swift */; };
+		30DF3A691CA71BE400E6068A /* StaticMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDA1C88F4F000F7FB6C /* StaticMessageHandler.swift */; };
+		30DF3A6A1CA71BE400E6068A /* StaticSubscriptionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDB1C88F4F000F7FB6C /* StaticSubscriptionContainer.swift */; };
+		30DF3A6B1CA71BE400E6068A /* StaticWeakSubscriptionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDC1C88F4F000F7FB6C /* StaticWeakSubscriptionContainer.swift */; };
+		30DF3A6C1CA71BE700E6068A /* NSNotificationMessageSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD41C88F4F000F7FB6C /* NSNotificationMessageSubscription.swift */; };
+		30DF3A6D1CA71BE700E6068A /* NSNotificationCenter+MessageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD31C88F4F000F7FB6C /* NSNotificationCenter+MessageSubscriber.swift */; };
+		30DF3A6E1CA71BE700E6068A /* NSNotificationQueue+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD51C88F4F000F7FB6C /* NSNotificationQueue+MessagePublisher.swift */; };
+		30DF3A6F1CA71BE700E6068A /* NSNotificationCenter+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303867F81CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -280,24 +280,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				303D1BE01C88F4F000F7FB6C /* NSNotificationQueue+MessagePublisher.swift in Sources */,
+				30DF3A501CA7186800E6068A /* NSNotificationCenter+NSNotificationMessage.swift in Sources */,
 				303D1BD01C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift in Sources */,
-				303D1BE61C88F4F000F7FB6C /* StaticSubscriptionContainer.swift in Sources */,
-				303D1BE21C88F4F000F7FB6C /* MessagePublisher.swift in Sources */,
-				303D1BE51C88F4F000F7FB6C /* StaticMessageHandler.swift in Sources */,
-				303D1BCD1C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift in Sources */,
-				303D1BE11C88F4F000F7FB6C /* Message.swift in Sources */,
-				303D1BDE1C88F4F000F7FB6C /* NSNotificationCenter+MessageSubscriber.swift in Sources */,
+				30DF3A6C1CA71BE700E6068A /* NSNotificationMessageSubscription.swift in Sources */,
+				30DF3A631CA71A0600E6068A /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift in Sources */,
+				30DF3A6D1CA71BE700E6068A /* NSNotificationCenter+MessageSubscriber.swift in Sources */,
 				303D1BF41C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.m in Sources */,
-				303D1BE41C88F4F000F7FB6C /* MessageSubscription.swift in Sources */,
-				303D1BDF1C88F4F000F7FB6C /* NSNotificationMessageSubscription.swift in Sources */,
-				303D1BE81C88F4F000F7FB6C /* WeakMessageSubscription.swift in Sources */,
-				303D1BE71C88F4F000F7FB6C /* StaticWeakSubscriptionContainer.swift in Sources */,
-				303D1BE31C88F4F000F7FB6C /* MessageSubscriber.swift in Sources */,
-				303D1BCE1C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift in Sources */,
-				303867F91CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift in Sources */,
+				30DF3A651CA71BE400E6068A /* MessagePublisher.swift in Sources */,
 				303D1BCC1C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift in Sources */,
+				30DF3A6E1CA71BE700E6068A /* NSNotificationQueue+MessagePublisher.swift in Sources */,
+				30DF3A6A1CA71BE400E6068A /* StaticSubscriptionContainer.swift in Sources */,
 				303D1BCF1C88F4E900F7FB6C /* NSNotificationMessage.swift in Sources */,
+				30DF3A641CA71BE400E6068A /* Message.swift in Sources */,
+				30DF3A691CA71BE400E6068A /* StaticMessageHandler.swift in Sources */,
+				30DF3A6B1CA71BE400E6068A /* StaticWeakSubscriptionContainer.swift in Sources */,
+				30DF3A681CA71BE400E6068A /* WeakMessageSubscription.swift in Sources */,
+				30DF3A6F1CA71BE700E6068A /* NSNotificationCenter+MessagePublisher.swift in Sources */,
+				30DF3A671CA71BE400E6068A /* MessageSubscription.swift in Sources */,
+				30DF3A661CA71BE400E6068A /* MessageSubscriber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
