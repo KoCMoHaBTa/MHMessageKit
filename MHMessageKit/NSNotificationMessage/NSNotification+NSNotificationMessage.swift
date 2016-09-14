@@ -8,26 +8,26 @@
 
 import Foundation
 
-public extension NSNotification {
+public extension Notification {
     
     private struct UserInfoKey {
         
-        private static let Message = "NSNotification.UserInfoKey.Message"
+        static let Message = "NSNotification.UserInfoKey.Message"
     }
     
     public var message: NSNotificationMessage? {
         
-        return self.userInfo?[NSNotification.UserInfoKey.Message] as? NSNotificationMessage
+        return self.userInfo?[Notification.UserInfoKey.Message] as? NSNotificationMessage
     }
     
-    public convenience init(message: NSNotificationMessage, object: AnyObject? = nil) {
+    public init(message: NSNotificationMessage, object: AnyObject? = nil) {
         
-        let name = message.dynamicType.notificationName()
+        let name = type(of: message).notificationName()
         
-        var userInfo = [NSObject: AnyObject]()
-        userInfo[NSNotification.UserInfoKey.Message] = message
+        var userInfo = [AnyHashable: Any]()
+        userInfo[Notification.UserInfoKey.Message] = message
         
-        self.init(name: name, object: object, userInfo: userInfo)
+        self.init(name: Notification.Name(rawValue: name), object: object, userInfo: userInfo)
     }
     
 //    ///A Generic method that tries to create and return a NSNotificationMessage instance from the current NSNotification object

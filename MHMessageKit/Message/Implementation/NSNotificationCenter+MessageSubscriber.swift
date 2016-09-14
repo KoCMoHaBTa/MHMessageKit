@@ -8,23 +8,24 @@
 
 import Foundation
 
-extension NSNotificationCenter: MessageSubscriber {
+extension NotificationCenter: MessageSubscriber {
     
-    public func subscribe<M where M : Message>(handler: (message: M) -> Void) -> MessageSubscription {
+    public func subscribe<M>(_ handler: @escaping (_ message: M) -> Void) -> MessageSubscription
+    where M : Message {
         
         guard
-            let messageType = M.self as? NSNotificationMessage.Type
-            else {
-                
-                NSException(name: NSInternalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
-                return NSNotificationMessageSubscription(observer: "")
+        let messageType = M.self as? NSNotificationMessage.Type
+        else {
+            
+            NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
+            return NSNotificationMessageSubscription(observer: "" as NSObjectProtocol)
         }
         
         let observer = self.addObserver(messageType: messageType, handler: { (message) -> Void in
             
             if let message = message as? M {
                 
-                handler(message: message)
+                handler(message)
                 return
             }
             
@@ -34,21 +35,22 @@ extension NSNotificationCenter: MessageSubscriber {
         return NSNotificationMessageSubscription(observer: observer)
     }
     
-    public func subscribe<M where M : Message>(handler: (message: M) -> Void) -> WeakMessageSubscription {
+    public func subscribe<M>(_ handler: @escaping (_ message: M) -> Void) -> WeakMessageSubscription
+    where M : Message {
         
         guard
-            let messageType = M.self as? NSNotificationMessage.Type
-            else {
-                
-                NSException(name: NSInternalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
-                return NSNotificationWeakMessageSubscription(observer: "")
+        let messageType = M.self as? NSNotificationMessage.Type
+        else {
+            
+            NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
+            return NSNotificationWeakMessageSubscription(observer: "" as NSObjectProtocol)
         }
         
         let observer = self.addWeakObserver(messageType: messageType, handler: { (message) -> Void in
             
             if let message = message as? M {
                 
-                handler(message: message)
+                handler(message)
                 return
             }
             
@@ -58,11 +60,11 @@ extension NSNotificationCenter: MessageSubscriber {
         return NSNotificationWeakMessageSubscription(observer: observer)
     }
     
-    public func unsubscribe(subscription: MessageSubscription) {
+    public func unsubscribe(from subscription: MessageSubscription) {
         
         guard let subscription = subscription as? NSNotificationMessageSubscription else {
             
-            NSException(name: NSInvalidArgumentException, reason: "Only subscriptions created by NSNotificationCenter are supported", userInfo: nil).raise()
+            NSException(name: NSExceptionName.invalidArgumentException, reason: "Only subscriptions created by NSNotificationCenter are supported", userInfo: nil).raise()
             return
         }
         

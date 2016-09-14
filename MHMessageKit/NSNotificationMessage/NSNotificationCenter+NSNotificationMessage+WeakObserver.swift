@@ -8,12 +8,12 @@
 
 import Foundation
 
-public extension NSNotificationCenter {
+public extension NotificationCenter {
     
     ///Adds an entry to the receiver’s dispatch table with a message queue and a block handler to add to the queue, and optional criteria: sender.
-    public func addWeakObserver<M where M : NSNotificationMessage>(sender: AnyObject? = nil, queue: NSOperationQueue? = nil, handler: (message: M) -> Void) -> NSObjectProtocol {
+    public func addWeakObserver<M>(_ sender: AnyObject? = nil, queue: OperationQueue? = nil, handler: @escaping (_ message: M) -> Void) -> NSObjectProtocol where M : NSNotificationMessage {
 
-        return self.addWeakObserverForName(M.notificationName(), object: sender, queue: queue, usingBlock: { (notification) in
+        return self.addWeakObserver(forName: M.notificationName(), object: sender, queue: queue, using: { (notification) in
             
             guard
             let message = notification.message as? M
@@ -23,14 +23,14 @@ public extension NSNotificationCenter {
                 return
             }
             
-            handler(message: message)
+            handler(message)
         })
     }
     
     ///Adds an entry to the receiver’s dispatch table with a message queue and a block handler to add to the queue for a given message type, and optional criteria: sender.
-    public func addWeakObserver(sender: AnyObject? = nil, queue: NSOperationQueue? = nil, messageType: NSNotificationMessage.Type, handler: (message: NSNotificationMessage) -> Void) -> NSObjectProtocol {
+    public func addWeakObserver(_ sender: AnyObject? = nil, queue: OperationQueue? = nil, messageType: NSNotificationMessage.Type, handler: @escaping (_ message: NSNotificationMessage) -> Void) -> NSObjectProtocol {
         
-        let observer = self.addWeakObserverForName(messageType.notificationName(), object: sender, queue: queue) { (notification) -> Void in
+        let observer = self.addWeakObserver(forName: messageType.notificationName(), object: sender, queue: queue) { (notification) -> Void in
             
             guard
             let message = notification.message
@@ -40,7 +40,7 @@ public extension NSNotificationCenter {
                 return
             }
             
-            handler(message: message)
+            handler(message)
         }
         
         return observer

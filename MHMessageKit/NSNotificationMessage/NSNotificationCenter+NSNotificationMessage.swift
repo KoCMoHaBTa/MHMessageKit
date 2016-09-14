@@ -8,12 +8,13 @@
 
 import Foundation
 
-public extension NSNotificationCenter {
+public extension NotificationCenter {
     
     ///Adds an entry to the receiver’s dispatch table with a message queue and a block handler to add to the queue, and optional criteria: sender.
-    public func addObserver<M where M : NSNotificationMessage>(sender: AnyObject? = nil, queue: NSOperationQueue? = nil, handler: (message: M) -> Void) -> NSObjectProtocol {
+    public func addObserver<M>(_ sender: AnyObject? = nil, queue: OperationQueue? = nil, handler: @escaping (_ message: M) -> Void) -> NSObjectProtocol
+    where M : NSNotificationMessage {
         
-        return self.addObserverForName(M.notificationName(), object: sender, queue: queue, usingBlock: { (notification) in
+        return self.addObserver(forName: NSNotification.Name(rawValue: M.notificationName()), object: sender, queue: queue, using: { (notification) in
             
             guard
             let message = notification.message as? M
@@ -23,14 +24,14 @@ public extension NSNotificationCenter {
                 return
             }
             
-            handler(message: message)
+            handler(message)
         })
     }
     
     ///Adds an entry to the receiver’s dispatch table with a message queue and a block handler to add to the queue for a given message type, and optional criteria: sender.
-    public func addObserver(sender: AnyObject? = nil, queue: NSOperationQueue? = nil, messageType: NSNotificationMessage.Type, handler: (message: NSNotificationMessage) -> Void) -> NSObjectProtocol {
+    public func addObserver(_ sender: AnyObject? = nil, queue: OperationQueue? = nil, messageType: NSNotificationMessage.Type, handler: @escaping (_ message: NSNotificationMessage) -> Void) -> NSObjectProtocol {
         
-        let observer = self.addObserverForName(messageType.notificationName(), object: sender, queue: queue) { (notification: NSNotification) -> Void in
+        let observer = self.addObserver(forName: NSNotification.Name(rawValue: messageType.notificationName()), object: sender, queue: queue) { (notification: Notification) -> Void in
             
             guard
             let message = notification.message
@@ -40,19 +41,19 @@ public extension NSNotificationCenter {
                 return
             }
             
-            handler(message: message)
+            handler(message)
         }
         
         return observer
     }
 }
 
-public extension NSNotificationCenter {
+public extension NotificationCenter {
     
     ///Posts a given message to the receiver.
-    public func postMessage(message: NSNotificationMessage, sender: AnyObject? = nil) {
+    public func post(_ message: NSNotificationMessage, sender: AnyObject? = nil) {
         
-        let notification = NSNotification(message: message, object: sender)
-        self.postNotification(notification)
+        let notification = Notification(name: message as! Notification.Name, object: sender)
+        self.post(notification)
     }
 }

@@ -8,18 +8,18 @@
 
 import Foundation
 
-extension NSNotificationCenter: MessagePublisher {
+extension NotificationCenter: MessagePublisher {
     
-    public func publishMessage(message: Message) {
+    public func publish(_ message: Message) {
         
         guard
         let message = message as? NSNotificationMessage
         else {
             
-            NSException(name: NSInternalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
+            NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
             return
         }
         
-        self.postMessage(message)
+        self.post(message)
     }
 }
