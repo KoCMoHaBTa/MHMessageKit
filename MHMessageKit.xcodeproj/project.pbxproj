@@ -10,13 +10,13 @@
 		303520771C88EC4E00436351 /* MHMessageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 303520761C88EC4E00436351 /* MHMessageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		303520CA1C88EE6500436351 /* MHMessageKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303520C91C88EE6500436351 /* MHMessageKitTests.swift */; };
 		303520CC1C88EE6500436351 /* MHMessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303520731C88EC4E00436351 /* MHMessageKit.framework */; };
-		303D1BCC1C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC71C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift */; };
-		303D1BCF1C88F4E900F7FB6C /* NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BCA1C88F4E900F7FB6C /* NSNotificationMessage.swift */; };
-		303D1BD01C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BCB1C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift */; };
+		303D1BCC1C88F4E900F7FB6C /* Notification+NotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC71C88F4E900F7FB6C /* Notification+NotificationMessage.swift */; };
+		303D1BCF1C88F4E900F7FB6C /* NotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BCA1C88F4E900F7FB6C /* NotificationMessage.swift */; };
+		303D1BD01C88F4E900F7FB6C /* NotificationQueue+NotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BCB1C88F4E900F7FB6C /* NotificationQueue+NotificationMessage.swift */; };
 		303D1BF41C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BF21C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.m */; };
 		303D1BF51C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 303D1BF31C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30DF3A501CA7186800E6068A /* NSNotificationCenter+NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC91C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift */; };
-		30DF3A631CA71A0600E6068A /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC81C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift */; };
+		30DF3A501CA7186800E6068A /* NotificationCenter+NotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC91C88F4E900F7FB6C /* NotificationCenter+NotificationMessage.swift */; };
+		30DF3A631CA71A0600E6068A /* NotificationCenter+NotificationMessage+WeakObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC81C88F4E900F7FB6C /* NotificationCenter+NotificationMessage+WeakObserver.swift */; };
 		30DF3A641CA71BE400E6068A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD61C88F4F000F7FB6C /* Message.swift */; };
 		30DF3A651CA71BE400E6068A /* MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD71C88F4F000F7FB6C /* MessagePublisher.swift */; };
 		30DF3A661CA71BE400E6068A /* MessageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD81C88F4F000F7FB6C /* MessageSubscriber.swift */; };
@@ -25,10 +25,10 @@
 		30DF3A691CA71BE400E6068A /* StaticMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDA1C88F4F000F7FB6C /* StaticMessageHandler.swift */; };
 		30DF3A6A1CA71BE400E6068A /* StaticSubscriptionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDB1C88F4F000F7FB6C /* StaticSubscriptionContainer.swift */; };
 		30DF3A6B1CA71BE400E6068A /* StaticWeakSubscriptionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDC1C88F4F000F7FB6C /* StaticWeakSubscriptionContainer.swift */; };
-		30DF3A6C1CA71BE700E6068A /* NSNotificationMessageSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD41C88F4F000F7FB6C /* NSNotificationMessageSubscription.swift */; };
-		30DF3A6D1CA71BE700E6068A /* NSNotificationCenter+MessageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD31C88F4F000F7FB6C /* NSNotificationCenter+MessageSubscriber.swift */; };
-		30DF3A6E1CA71BE700E6068A /* NSNotificationQueue+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD51C88F4F000F7FB6C /* NSNotificationQueue+MessagePublisher.swift */; };
-		30DF3A6F1CA71BE700E6068A /* NSNotificationCenter+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303867F81CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift */; };
+		30DF3A6C1CA71BE700E6068A /* NotificationMessageSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD41C88F4F000F7FB6C /* NotificationMessageSubscription.swift */; };
+		30DF3A6D1CA71BE700E6068A /* NotificationCenter+MessageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD31C88F4F000F7FB6C /* NotificationCenter+MessageSubscriber.swift */; };
+		30DF3A6E1CA71BE700E6068A /* NotificationQueue+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD51C88F4F000F7FB6C /* NotificationQueue+MessagePublisher.swift */; };
+		30DF3A6F1CA71BE700E6068A /* NotificationCenter+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303867F81CA02FF400BE4552 /* NotificationCenter+MessagePublisher.swift */; };
 		9997A7301D9B9E1800B81C8D /* XCTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997A72F1D9B9E1800B81C8D /* XCTestExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,15 +51,15 @@
 		303520C71C88EE6500436351 /* MHMessageKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHMessageKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		303520C91C88EE6500436351 /* MHMessageKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHMessageKitTests.swift; sourceTree = "<group>"; };
 		303520CB1C88EE6500436351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		303867F81CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+MessagePublisher.swift"; sourceTree = "<group>"; };
-		303D1BC71C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotification+NSNotificationMessage.swift"; sourceTree = "<group>"; };
-		303D1BC81C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+NSNotificationMessage+WeakObserver.swift"; sourceTree = "<group>"; };
-		303D1BC91C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+NSNotificationMessage.swift"; sourceTree = "<group>"; };
-		303D1BCA1C88F4E900F7FB6C /* NSNotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationMessage.swift; sourceTree = "<group>"; };
-		303D1BCB1C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationQueue+NSNotificationMessage.swift"; sourceTree = "<group>"; };
-		303D1BD31C88F4F000F7FB6C /* NSNotificationCenter+MessageSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+MessageSubscriber.swift"; sourceTree = "<group>"; };
-		303D1BD41C88F4F000F7FB6C /* NSNotificationMessageSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationMessageSubscription.swift; sourceTree = "<group>"; };
-		303D1BD51C88F4F000F7FB6C /* NSNotificationQueue+MessagePublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationQueue+MessagePublisher.swift"; sourceTree = "<group>"; };
+		303867F81CA02FF400BE4552 /* NotificationCenter+MessagePublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+MessagePublisher.swift"; sourceTree = "<group>"; };
+		303D1BC71C88F4E900F7FB6C /* Notification+NotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+NotificationMessage.swift"; sourceTree = "<group>"; };
+		303D1BC81C88F4E900F7FB6C /* NotificationCenter+NotificationMessage+WeakObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+NotificationMessage+WeakObserver.swift"; sourceTree = "<group>"; };
+		303D1BC91C88F4E900F7FB6C /* NotificationCenter+NotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+NotificationMessage.swift"; sourceTree = "<group>"; };
+		303D1BCA1C88F4E900F7FB6C /* NotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationMessage.swift; sourceTree = "<group>"; };
+		303D1BCB1C88F4E900F7FB6C /* NotificationQueue+NotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationQueue+NotificationMessage.swift"; sourceTree = "<group>"; };
+		303D1BD31C88F4F000F7FB6C /* NotificationCenter+MessageSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+MessageSubscriber.swift"; sourceTree = "<group>"; };
+		303D1BD41C88F4F000F7FB6C /* NotificationMessageSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationMessageSubscription.swift; sourceTree = "<group>"; };
+		303D1BD51C88F4F000F7FB6C /* NotificationQueue+MessagePublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationQueue+MessagePublisher.swift"; sourceTree = "<group>"; };
 		303D1BD61C88F4F000F7FB6C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		303D1BD71C88F4F000F7FB6C /* MessagePublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePublisher.swift; sourceTree = "<group>"; };
 		303D1BD81C88F4F000F7FB6C /* MessageSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageSubscriber.swift; sourceTree = "<group>"; };
@@ -138,11 +138,11 @@
 		303D1BC61C88F4E900F7FB6C /* NSNotificationMessage */ = {
 			isa = PBXGroup;
 			children = (
-				303D1BCA1C88F4E900F7FB6C /* NSNotificationMessage.swift */,
-				303D1BC71C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift */,
-				303D1BC91C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift */,
-				303D1BCB1C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift */,
-				303D1BC81C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift */,
+				303D1BCA1C88F4E900F7FB6C /* NotificationMessage.swift */,
+				303D1BC71C88F4E900F7FB6C /* Notification+NotificationMessage.swift */,
+				303D1BC91C88F4E900F7FB6C /* NotificationCenter+NotificationMessage.swift */,
+				303D1BCB1C88F4E900F7FB6C /* NotificationQueue+NotificationMessage.swift */,
+				303D1BC81C88F4E900F7FB6C /* NotificationCenter+NotificationMessage+WeakObserver.swift */,
 			);
 			path = NSNotificationMessage;
 			sourceTree = "<group>";
@@ -166,10 +166,10 @@
 		303D1BD21C88F4F000F7FB6C /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				303D1BD41C88F4F000F7FB6C /* NSNotificationMessageSubscription.swift */,
-				303D1BD31C88F4F000F7FB6C /* NSNotificationCenter+MessageSubscriber.swift */,
-				303D1BD51C88F4F000F7FB6C /* NSNotificationQueue+MessagePublisher.swift */,
-				303867F81CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift */,
+				303D1BD41C88F4F000F7FB6C /* NotificationMessageSubscription.swift */,
+				303D1BD31C88F4F000F7FB6C /* NotificationCenter+MessageSubscriber.swift */,
+				303D1BD51C88F4F000F7FB6C /* NotificationQueue+MessagePublisher.swift */,
+				303867F81CA02FF400BE4552 /* NotificationCenter+MessagePublisher.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -285,22 +285,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30DF3A501CA7186800E6068A /* NSNotificationCenter+NSNotificationMessage.swift in Sources */,
-				303D1BD01C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift in Sources */,
-				30DF3A6C1CA71BE700E6068A /* NSNotificationMessageSubscription.swift in Sources */,
-				30DF3A631CA71A0600E6068A /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift in Sources */,
-				30DF3A6D1CA71BE700E6068A /* NSNotificationCenter+MessageSubscriber.swift in Sources */,
+				30DF3A501CA7186800E6068A /* NotificationCenter+NotificationMessage.swift in Sources */,
+				303D1BD01C88F4E900F7FB6C /* NotificationQueue+NotificationMessage.swift in Sources */,
+				30DF3A6C1CA71BE700E6068A /* NotificationMessageSubscription.swift in Sources */,
+				30DF3A631CA71A0600E6068A /* NotificationCenter+NotificationMessage+WeakObserver.swift in Sources */,
+				30DF3A6D1CA71BE700E6068A /* NotificationCenter+MessageSubscriber.swift in Sources */,
 				303D1BF41C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.m in Sources */,
 				30DF3A651CA71BE400E6068A /* MessagePublisher.swift in Sources */,
-				303D1BCC1C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift in Sources */,
-				30DF3A6E1CA71BE700E6068A /* NSNotificationQueue+MessagePublisher.swift in Sources */,
+				303D1BCC1C88F4E900F7FB6C /* Notification+NotificationMessage.swift in Sources */,
+				30DF3A6E1CA71BE700E6068A /* NotificationQueue+MessagePublisher.swift in Sources */,
 				30DF3A6A1CA71BE400E6068A /* StaticSubscriptionContainer.swift in Sources */,
-				303D1BCF1C88F4E900F7FB6C /* NSNotificationMessage.swift in Sources */,
+				303D1BCF1C88F4E900F7FB6C /* NotificationMessage.swift in Sources */,
 				30DF3A641CA71BE400E6068A /* Message.swift in Sources */,
 				30DF3A691CA71BE400E6068A /* StaticMessageHandler.swift in Sources */,
 				30DF3A6B1CA71BE400E6068A /* StaticWeakSubscriptionContainer.swift in Sources */,
 				30DF3A681CA71BE400E6068A /* WeakMessageSubscription.swift in Sources */,
-				30DF3A6F1CA71BE700E6068A /* NSNotificationCenter+MessagePublisher.swift in Sources */,
+				30DF3A6F1CA71BE700E6068A /* NotificationCenter+MessagePublisher.swift in Sources */,
 				30DF3A671CA71BE400E6068A /* MessageSubscription.swift in Sources */,
 				30DF3A661CA71BE400E6068A /* MessageSubscriber.swift in Sources */,
 			);
