@@ -15,12 +15,12 @@ public extension Notification {
         static let Message = "NSNotification.UserInfoKey.Message"
     }
     
-    public var message: NSNotificationMessage? {
+    public var message: NotificationMessage? {
         
-        return self.userInfo?[Notification.UserInfoKey.Message] as? NSNotificationMessage
+        return self.userInfo?[Notification.UserInfoKey.Message] as? NotificationMessage
     }
     
-    public init(message: NSNotificationMessage, object: AnyObject? = nil) {
+    public init(message: NotificationMessage, object: AnyObject? = nil) {
         
         let name = type(of: message).notificationName()
         

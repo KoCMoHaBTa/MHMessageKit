@@ -11,12 +11,12 @@ import XCTest
 
 class MHMessageKitTests: XCTestCase {
     
-    struct N1: NSNotificationMessage {}
-    class N2: NSNotificationMessage {}
+    struct N1: NotificationMessage {}
+    class N2: NotificationMessage {}
     class N3: N2 {}
     
-    class S1: NSNotificationMessage, Message {}
-    struct S2: NSNotificationMessage, Message {}
+    class S1: NotificationMessage, Message {}
+    struct S2: NotificationMessage, Message {}
     class S3: S1 {}
    
     func testNotificationMessageCenter() {

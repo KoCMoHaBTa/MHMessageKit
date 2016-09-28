@@ -11,7 +11,7 @@ import Foundation
 public extension NotificationCenter {
     
     ///Adds an entry to the receiver’s dispatch table with a message queue and a block handler to add to the queue, and optional criteria: sender.
-    public func addWeakObserver<M>(_ sender: AnyObject? = nil, queue: OperationQueue? = nil, handler: @escaping (_ message: M) -> Void) -> NSObjectProtocol where M : NSNotificationMessage {
+    public func addWeakObserver<M>(_ sender: AnyObject? = nil, queue: OperationQueue? = nil, handler: @escaping (_ message: M) -> Void) -> NSObjectProtocol where M : NotificationMessage {
 
         return self.addWeakObserver(forName: M.notificationName(), object: sender, queue: queue, using: { (notification) in
             
@@ -28,7 +28,7 @@ public extension NotificationCenter {
     }
     
     ///Adds an entry to the receiver’s dispatch table with a message queue and a block handler to add to the queue for a given message type, and optional criteria: sender.
-    public func addWeakObserver(_ sender: AnyObject? = nil, queue: OperationQueue? = nil, messageType: NSNotificationMessage.Type, handler: @escaping (_ message: NSNotificationMessage) -> Void) -> NSObjectProtocol {
+    public func addWeakObserver(_ sender: AnyObject? = nil, queue: OperationQueue? = nil, messageType: NotificationMessage.Type, handler: @escaping (_ message: NotificationMessage) -> Void) -> NSObjectProtocol {
         
         let observer = self.addWeakObserver(forName: messageType.notificationName(), object: sender, queue: queue) { (notification) -> Void in
             

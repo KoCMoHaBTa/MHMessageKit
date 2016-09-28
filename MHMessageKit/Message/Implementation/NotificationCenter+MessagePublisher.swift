@@ -13,7 +13,7 @@ extension NotificationCenter: MessagePublisher {
     public func publish(_ message: Message) {
         
         guard
-        let message = message as? NSNotificationMessage
+        let message = message as? NotificationMessage
         else {
             
             NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()

@@ -11,7 +11,7 @@ import Foundation
 public extension NotificationQueue {
     
     ///Adds a message to the notification queue with a specified sender and  posting style.
-    public func enqueue(_ message: NSNotificationMessage, sender: AnyObject? = nil, postingStyle: NotificationQueue.PostingStyle = .whenIdle) {
+    public func enqueue(_ message: NotificationMessage, sender: AnyObject? = nil, postingStyle: NotificationQueue.PostingStyle = .whenIdle) {
         
         let notification = Notification(message: message, object: sender)
         self.enqueue(notification, postingStyle: postingStyle)

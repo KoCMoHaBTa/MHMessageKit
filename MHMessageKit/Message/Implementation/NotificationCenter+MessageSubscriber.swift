@@ -14,7 +14,7 @@ extension NotificationCenter: MessageSubscriber {
     where M : Message {
         
         guard
-        let messageType = M.self as? NSNotificationMessage.Type
+        let messageType = M.self as? NotificationMessage.Type
         else {
             
             NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
@@ -39,7 +39,7 @@ extension NotificationCenter: MessageSubscriber {
     where M : Message {
         
         guard
-        let messageType = M.self as? NSNotificationMessage.Type
+        let messageType = M.self as? NotificationMessage.Type
         else {
             
             NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
