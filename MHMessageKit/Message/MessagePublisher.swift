@@ -10,5 +10,5 @@ import Foundation
 
 public protocol MessagePublisher {
     
-    func publishMessage(message: Message)
+    func publish(_ message: Message)
 }

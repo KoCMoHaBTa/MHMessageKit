@@ -10,13 +10,13 @@
 		303520771C88EC4E00436351 /* MHMessageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 303520761C88EC4E00436351 /* MHMessageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		303520CA1C88EE6500436351 /* MHMessageKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303520C91C88EE6500436351 /* MHMessageKitTests.swift */; };
 		303520CC1C88EE6500436351 /* MHMessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303520731C88EC4E00436351 /* MHMessageKit.framework */; };
-		303D1BCC1C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC71C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift */; };
-		303D1BCF1C88F4E900F7FB6C /* NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BCA1C88F4E900F7FB6C /* NSNotificationMessage.swift */; };
-		303D1BD01C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BCB1C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift */; };
+		303D1BCC1C88F4E900F7FB6C /* Notification+NotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC71C88F4E900F7FB6C /* Notification+NotificationMessage.swift */; };
+		303D1BCF1C88F4E900F7FB6C /* NotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BCA1C88F4E900F7FB6C /* NotificationMessage.swift */; };
+		303D1BD01C88F4E900F7FB6C /* NotificationQueue+NotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BCB1C88F4E900F7FB6C /* NotificationQueue+NotificationMessage.swift */; };
 		303D1BF41C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BF21C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.m */; };
 		303D1BF51C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 303D1BF31C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30DF3A501CA7186800E6068A /* NSNotificationCenter+NSNotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC91C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift */; };
-		30DF3A631CA71A0600E6068A /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC81C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift */; };
+		30DF3A501CA7186800E6068A /* NotificationCenter+NotificationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC91C88F4E900F7FB6C /* NotificationCenter+NotificationMessage.swift */; };
+		30DF3A631CA71A0600E6068A /* NotificationCenter+NotificationMessage+WeakObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BC81C88F4E900F7FB6C /* NotificationCenter+NotificationMessage+WeakObserver.swift */; };
 		30DF3A641CA71BE400E6068A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD61C88F4F000F7FB6C /* Message.swift */; };
 		30DF3A651CA71BE400E6068A /* MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD71C88F4F000F7FB6C /* MessagePublisher.swift */; };
 		30DF3A661CA71BE400E6068A /* MessageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD81C88F4F000F7FB6C /* MessageSubscriber.swift */; };
@@ -25,10 +25,11 @@
 		30DF3A691CA71BE400E6068A /* StaticMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDA1C88F4F000F7FB6C /* StaticMessageHandler.swift */; };
 		30DF3A6A1CA71BE400E6068A /* StaticSubscriptionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDB1C88F4F000F7FB6C /* StaticSubscriptionContainer.swift */; };
 		30DF3A6B1CA71BE400E6068A /* StaticWeakSubscriptionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BDC1C88F4F000F7FB6C /* StaticWeakSubscriptionContainer.swift */; };
-		30DF3A6C1CA71BE700E6068A /* NSNotificationMessageSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD41C88F4F000F7FB6C /* NSNotificationMessageSubscription.swift */; };
-		30DF3A6D1CA71BE700E6068A /* NSNotificationCenter+MessageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD31C88F4F000F7FB6C /* NSNotificationCenter+MessageSubscriber.swift */; };
-		30DF3A6E1CA71BE700E6068A /* NSNotificationQueue+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD51C88F4F000F7FB6C /* NSNotificationQueue+MessagePublisher.swift */; };
-		30DF3A6F1CA71BE700E6068A /* NSNotificationCenter+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303867F81CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift */; };
+		30DF3A6C1CA71BE700E6068A /* NotificationMessageSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD41C88F4F000F7FB6C /* NotificationMessageSubscription.swift */; };
+		30DF3A6D1CA71BE700E6068A /* NotificationCenter+MessageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD31C88F4F000F7FB6C /* NotificationCenter+MessageSubscriber.swift */; };
+		30DF3A6E1CA71BE700E6068A /* NotificationQueue+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD51C88F4F000F7FB6C /* NotificationQueue+MessagePublisher.swift */; };
+		30DF3A6F1CA71BE700E6068A /* NotificationCenter+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303867F81CA02FF400BE4552 /* NotificationCenter+MessagePublisher.swift */; };
+		9997A7301D9B9E1800B81C8D /* XCTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997A72F1D9B9E1800B81C8D /* XCTestExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,15 +51,15 @@
 		303520C71C88EE6500436351 /* MHMessageKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHMessageKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		303520C91C88EE6500436351 /* MHMessageKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHMessageKitTests.swift; sourceTree = "<group>"; };
 		303520CB1C88EE6500436351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		303867F81CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+MessagePublisher.swift"; sourceTree = "<group>"; };
-		303D1BC71C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotification+NSNotificationMessage.swift"; sourceTree = "<group>"; };
-		303D1BC81C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+NSNotificationMessage+WeakObserver.swift"; sourceTree = "<group>"; };
-		303D1BC91C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+NSNotificationMessage.swift"; sourceTree = "<group>"; };
-		303D1BCA1C88F4E900F7FB6C /* NSNotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationMessage.swift; sourceTree = "<group>"; };
-		303D1BCB1C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationQueue+NSNotificationMessage.swift"; sourceTree = "<group>"; };
-		303D1BD31C88F4F000F7FB6C /* NSNotificationCenter+MessageSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+MessageSubscriber.swift"; sourceTree = "<group>"; };
-		303D1BD41C88F4F000F7FB6C /* NSNotificationMessageSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationMessageSubscription.swift; sourceTree = "<group>"; };
-		303D1BD51C88F4F000F7FB6C /* NSNotificationQueue+MessagePublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationQueue+MessagePublisher.swift"; sourceTree = "<group>"; };
+		303867F81CA02FF400BE4552 /* NotificationCenter+MessagePublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+MessagePublisher.swift"; sourceTree = "<group>"; };
+		303D1BC71C88F4E900F7FB6C /* Notification+NotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+NotificationMessage.swift"; sourceTree = "<group>"; };
+		303D1BC81C88F4E900F7FB6C /* NotificationCenter+NotificationMessage+WeakObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+NotificationMessage+WeakObserver.swift"; sourceTree = "<group>"; };
+		303D1BC91C88F4E900F7FB6C /* NotificationCenter+NotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+NotificationMessage.swift"; sourceTree = "<group>"; };
+		303D1BCA1C88F4E900F7FB6C /* NotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationMessage.swift; sourceTree = "<group>"; };
+		303D1BCB1C88F4E900F7FB6C /* NotificationQueue+NotificationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationQueue+NotificationMessage.swift"; sourceTree = "<group>"; };
+		303D1BD31C88F4F000F7FB6C /* NotificationCenter+MessageSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+MessageSubscriber.swift"; sourceTree = "<group>"; };
+		303D1BD41C88F4F000F7FB6C /* NotificationMessageSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationMessageSubscription.swift; sourceTree = "<group>"; };
+		303D1BD51C88F4F000F7FB6C /* NotificationQueue+MessagePublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationQueue+MessagePublisher.swift"; sourceTree = "<group>"; };
 		303D1BD61C88F4F000F7FB6C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		303D1BD71C88F4F000F7FB6C /* MessagePublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePublisher.swift; sourceTree = "<group>"; };
 		303D1BD81C88F4F000F7FB6C /* MessageSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageSubscriber.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		303D1BDD1C88F4F000F7FB6C /* WeakMessageSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakMessageSubscription.swift; sourceTree = "<group>"; };
 		303D1BF21C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+WeakObserver.m"; sourceTree = "<group>"; };
 		303D1BF31C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+WeakObserver.h"; sourceTree = "<group>"; };
+		9997A72F1D9B9E1800B81C8D /* XCTestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		303520C81C88EE6500436351 /* MHMessageKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				9997A72F1D9B9E1800B81C8D /* XCTestExtensions.swift */,
 				303520C91C88EE6500436351 /* MHMessageKitTests.swift */,
 				303520CB1C88EE6500436351 /* Info.plist */,
 			);
@@ -135,11 +138,11 @@
 		303D1BC61C88F4E900F7FB6C /* NSNotificationMessage */ = {
 			isa = PBXGroup;
 			children = (
-				303D1BCA1C88F4E900F7FB6C /* NSNotificationMessage.swift */,
-				303D1BC71C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift */,
-				303D1BC91C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage.swift */,
-				303D1BCB1C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift */,
-				303D1BC81C88F4E900F7FB6C /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift */,
+				303D1BCA1C88F4E900F7FB6C /* NotificationMessage.swift */,
+				303D1BC71C88F4E900F7FB6C /* Notification+NotificationMessage.swift */,
+				303D1BC91C88F4E900F7FB6C /* NotificationCenter+NotificationMessage.swift */,
+				303D1BCB1C88F4E900F7FB6C /* NotificationQueue+NotificationMessage.swift */,
+				303D1BC81C88F4E900F7FB6C /* NotificationCenter+NotificationMessage+WeakObserver.swift */,
 			);
 			path = NSNotificationMessage;
 			sourceTree = "<group>";
@@ -163,10 +166,10 @@
 		303D1BD21C88F4F000F7FB6C /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				303D1BD41C88F4F000F7FB6C /* NSNotificationMessageSubscription.swift */,
-				303D1BD31C88F4F000F7FB6C /* NSNotificationCenter+MessageSubscriber.swift */,
-				303D1BD51C88F4F000F7FB6C /* NSNotificationQueue+MessagePublisher.swift */,
-				303867F81CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift */,
+				303D1BD41C88F4F000F7FB6C /* NotificationMessageSubscription.swift */,
+				303D1BD31C88F4F000F7FB6C /* NotificationCenter+MessageSubscriber.swift */,
+				303D1BD51C88F4F000F7FB6C /* NotificationQueue+MessagePublisher.swift */,
+				303867F81CA02FF400BE4552 /* NotificationCenter+MessagePublisher.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -229,14 +232,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Milen Halachev";
 				TargetAttributes = {
 					303520721C88EC4E00436351 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 					};
 					303520C61C88EE6500436351 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -280,22 +285,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30DF3A501CA7186800E6068A /* NSNotificationCenter+NSNotificationMessage.swift in Sources */,
-				303D1BD01C88F4E900F7FB6C /* NSNotificationQueue+NSNotificationMessage.swift in Sources */,
-				30DF3A6C1CA71BE700E6068A /* NSNotificationMessageSubscription.swift in Sources */,
-				30DF3A631CA71A0600E6068A /* NSNotificationCenter+NSNotificationMessage+WeakObserver.swift in Sources */,
-				30DF3A6D1CA71BE700E6068A /* NSNotificationCenter+MessageSubscriber.swift in Sources */,
+				30DF3A501CA7186800E6068A /* NotificationCenter+NotificationMessage.swift in Sources */,
+				303D1BD01C88F4E900F7FB6C /* NotificationQueue+NotificationMessage.swift in Sources */,
+				30DF3A6C1CA71BE700E6068A /* NotificationMessageSubscription.swift in Sources */,
+				30DF3A631CA71A0600E6068A /* NotificationCenter+NotificationMessage+WeakObserver.swift in Sources */,
+				30DF3A6D1CA71BE700E6068A /* NotificationCenter+MessageSubscriber.swift in Sources */,
 				303D1BF41C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.m in Sources */,
 				30DF3A651CA71BE400E6068A /* MessagePublisher.swift in Sources */,
-				303D1BCC1C88F4E900F7FB6C /* NSNotification+NSNotificationMessage.swift in Sources */,
-				30DF3A6E1CA71BE700E6068A /* NSNotificationQueue+MessagePublisher.swift in Sources */,
+				303D1BCC1C88F4E900F7FB6C /* Notification+NotificationMessage.swift in Sources */,
+				30DF3A6E1CA71BE700E6068A /* NotificationQueue+MessagePublisher.swift in Sources */,
 				30DF3A6A1CA71BE400E6068A /* StaticSubscriptionContainer.swift in Sources */,
-				303D1BCF1C88F4E900F7FB6C /* NSNotificationMessage.swift in Sources */,
+				303D1BCF1C88F4E900F7FB6C /* NotificationMessage.swift in Sources */,
 				30DF3A641CA71BE400E6068A /* Message.swift in Sources */,
 				30DF3A691CA71BE400E6068A /* StaticMessageHandler.swift in Sources */,
 				30DF3A6B1CA71BE400E6068A /* StaticWeakSubscriptionContainer.swift in Sources */,
 				30DF3A681CA71BE400E6068A /* WeakMessageSubscription.swift in Sources */,
-				30DF3A6F1CA71BE700E6068A /* NSNotificationCenter+MessagePublisher.swift in Sources */,
+				30DF3A6F1CA71BE700E6068A /* NotificationCenter+MessagePublisher.swift in Sources */,
 				30DF3A671CA71BE400E6068A /* MessageSubscription.swift in Sources */,
 				30DF3A661CA71BE400E6068A /* MessageSubscriber.swift in Sources */,
 			);
@@ -305,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9997A7301D9B9E1800B81C8D /* XCTestExtensions.swift in Sources */,
 				303520CA1C88EE6500436351 /* MHMessageKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,8 +339,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -381,8 +389,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -402,6 +412,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -413,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -424,6 +436,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -431,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -441,6 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.MHMessageKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -452,6 +467,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.MHMessageKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -463,6 +479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.MHMessageKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

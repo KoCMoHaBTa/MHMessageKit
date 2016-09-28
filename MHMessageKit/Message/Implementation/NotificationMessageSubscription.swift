@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NSNotificationMessageSubscription: MessageSubscription {
+struct NotificationMessageSubscription: MessageSubscription {
     
     let observer: NSObjectProtocol
     
@@ -18,7 +18,7 @@ struct NSNotificationMessageSubscription: MessageSubscription {
     }
 }
 
-struct NSNotificationWeakMessageSubscription: WeakMessageSubscription {
+struct NotificationWeakMessageSubscription: WeakMessageSubscription {
     
     let observer: NSObjectProtocol
     

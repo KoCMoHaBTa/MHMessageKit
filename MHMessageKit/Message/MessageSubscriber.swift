@@ -10,31 +10,41 @@ import Foundation
 
 public protocol MessageSubscriber {
     
-    func subscribe<M where M: Message>(handler: (message: M) -> Void) -> MessageSubscription
-    func subscribe<M where M: Message>(handler: (message: M) -> Void) -> WeakMessageSubscription
-    func unsubscribe(subscription: MessageSubscription)
+    func subscribe<M>(_ handler: @escaping (_ message: M) -> Void) -> MessageSubscription
+    where M: Message
     
-    func registerHandler<H, I where H: StaticMessageHandler, I == H.RegistrationInput>(handler: H.Type, input: I)
-    func unregisterHandler<H where H: StaticMessageHandler>(handler: H.Type)
+    func subscribe<M>(_ handler: @escaping  (_ message: M) -> Void) -> WeakMessageSubscription
+    where M: Message
+    
+    func unsubscribe(from subscription: MessageSubscription)
+    
+    func register<H, I>(_ handler: H.Type, input: I)
+    where H: StaticMessageHandler, I == H.RegistrationInput
+    
+    func unregister<H>(_ handler: H.Type)
+    where H: StaticMessageHandler
 }
 
 public extension MessageSubscriber {
     
-    func registerHandler<H, I where H: StaticMessageHandler, I == H.RegistrationInput>(handler: H.Type, input: I) {
+    func register<H, I>(_ handler: H.Type, input: I)
+    where H: StaticMessageHandler, I == H.RegistrationInput {
         
-        handler.registerSubscriptions(self, input: input)
+        handler.registerSubscriptions(from: self, input: input)
     }
     
-    func unregisterHandler<H where H: StaticMessageHandler>(handler: H.Type) {
+    func unregister<H>(_ handler: H.Type)
+    where H: StaticMessageHandler {
         
-        handler.unregisterSubscriptions(self)
+        handler.unregisterSubscriptions(from: self)
     }
 }
 
 public extension MessageSubscriber {
     
-    func registerHandler<H where H: StaticMessageHandler, H.RegistrationInput == Void>(handler: H.Type) {
+    func register<H>(_ handler: H.Type)
+    where H: StaticMessageHandler, H.RegistrationInput == Void {
         
-        self.registerHandler(handler, input: ())
+        self.register(handler, input: ())
     }
 }
