@@ -18,7 +18,7 @@ extension NotificationCenter: MessageSubscriber {
         else {
             
             NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
-            return NSNotificationMessageSubscription(observer: "" as NSObjectProtocol)
+            return NotificationMessageSubscription(observer: "" as NSObjectProtocol)
         }
         
         let observer = self.addObserver(messageType: messageType, handler: { (message) -> Void in
@@ -32,7 +32,7 @@ extension NotificationCenter: MessageSubscriber {
             NSLog("Unhandled message \(messageType.notificationName()) - \(message)")
         })
         
-        return NSNotificationMessageSubscription(observer: observer)
+        return NotificationMessageSubscription(observer: observer)
     }
     
     public func subscribe<M>(_ handler: @escaping (_ message: M) -> Void) -> WeakMessageSubscription
@@ -43,7 +43,7 @@ extension NotificationCenter: MessageSubscriber {
         else {
             
             NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
-            return NSNotificationWeakMessageSubscription(observer: "" as NSObjectProtocol)
+            return NotificationWeakMessageSubscription(observer: "" as NSObjectProtocol)
         }
         
         let observer = self.addWeakObserver(messageType: messageType, handler: { (message) -> Void in
@@ -57,12 +57,12 @@ extension NotificationCenter: MessageSubscriber {
             NSLog("Unhandled message \(messageType.notificationName()) - \(message)")
         })
         
-        return NSNotificationWeakMessageSubscription(observer: observer)
+        return NotificationWeakMessageSubscription(observer: observer)
     }
     
     public func unsubscribe(from subscription: MessageSubscription) {
         
-        guard let subscription = subscription as? NSNotificationMessageSubscription else {
+        guard let subscription = subscription as? NotificationMessageSubscription else {
             
             NSException(name: NSExceptionName.invalidArgumentException, reason: "Only subscriptions created by NSNotificationCenter are supported", userInfo: nil).raise()
             return
