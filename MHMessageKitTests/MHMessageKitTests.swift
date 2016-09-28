@@ -7,29 +7,200 @@
 //
 
 import XCTest
+@testable import MHMessageKit
 
 class MHMessageKitTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    struct N1: NSNotificationMessage {}
+    class N2: NSNotificationMessage {}
+    class N3: N2 {}
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    class S1: NSNotificationMessage, Message {}
+    struct S2: NSNotificationMessage, Message {}
+    class S3: S1 {}
+   
+    func testNotificationMessageCenter() {
+        
+        self.performExpectation { (expectation) in
+            
+            let n1 = NotificationCenter.default.addObserver { (n: N1) in
+                
+                expectation.fulfill()
+            }
+            
+            let n2 = NotificationCenter.default.addWeakObserver { (n: N2) in
+                
+                XCTFail()
+            }
+            
+            let n3 = NotificationCenter.default.addObserver { (n: N3) in
+                
+                XCTFail()
+            }
+        
+            NotificationCenter.default.post(N1())
+            
+            NotificationCenter.default.removeObserver(n1)
+            print(n2)
+            NotificationCenter.default.removeObserver(n3)
+        }
+        
+        self.performExpectation { (expectation) in
+            
+            let n1 = NotificationCenter.default.addObserver { (n: N1) in
+                
+                XCTFail()
+            }
+            
+            let n2 = NotificationCenter.default.addWeakObserver { (n: N2) in
+                
+                expectation.fulfill()
+            }
+            
+            let n3 = NotificationCenter.default.addWeakObserver { (n: N3) in
+                
+                XCTFail()
+            }
+            
+            NotificationCenter.default.post(N2())
+            
+            NotificationCenter.default.removeObserver(n1)
+            print(n2)
+            print(n3)
+        }
+        
+        self.performExpectation { (expectation) in
+            
+            let n1 = NotificationCenter.default.addWeakObserver { (n: N1) in
+                
+                XCTFail()
+            }
+            
+            let n2 = NotificationCenter.default.addWeakObserver { (n: N2) in
+                
+                XCTFail()
+            }
+            
+            let n3 = NotificationCenter.default.addWeakObserver { (n: N3) in
+                
+                expectation.fulfill()
+            }
+            
+            NotificationCenter.default.post(N3())
+            
+            print(n1)
+            print(n2)
+            print(n3)
         }
     }
     
+    func testNotificationMessageQueue() {
+        
+        self.performExpectation { (expectation) in
+            
+            expectation.add(conditions: [N1.notificationName(), N2.notificationName(), N3.notificationName()])
+            
+            let n1 = NotificationCenter.default.addObserver { (n: N1) in
+                
+                expectation.fulfill(condition: type(of: n).notificationName())
+            }
+            
+            let n2 = NotificationCenter.default.addWeakObserver { (n: N2) in
+                
+                expectation.fulfill(condition: type(of: n).notificationName())
+            }
+            
+            let n3 = NotificationCenter.default.addObserver { (n: N3) in
+                
+                expectation.fulfill(condition: type(of: n).notificationName())
+            }
+            
+            NotificationQueue.default.enqueue(N1(), sender: nil, postingStyle: .now)
+            NotificationQueue.default.enqueue(N2(), sender: nil, postingStyle: .now)
+            NotificationQueue.default.enqueue(N3(), sender: nil, postingStyle: .now)
+            
+            NotificationCenter.default.removeObserver(n1)
+            print(n2)
+            NotificationCenter.default.removeObserver(n3)
+        }
+    }
+    
+    func testDynamicTypeObservers() {
+        
+        self.performExpectation { (expectation) in
+            
+            expectation.add(conditions: [N1.notificationName(), N3.notificationName()])
+            
+            let n1 = NotificationCenter.default.addObserver(messageType: N1.self) { (n) in
+                
+                expectation.fulfill(condition: type(of: n).notificationName())
+            }
+            
+            let n2 = NotificationCenter.default.addWeakObserver(messageType: N2.self) { (n) in
+                
+                XCTFail()
+            }
+            
+            let n3 = NotificationCenter.default.addObserver(messageType: N3.self) { (n) in
+                
+                expectation.fulfill(condition: type(of: n).notificationName())
+            }
+            
+            NotificationQueue.default.enqueue(N1(), sender: nil, postingStyle: .now)
+            NotificationQueue.default.enqueue(N3(), sender: nil, postingStyle: .now)
+            
+            NotificationCenter.default.removeObserver(n1)
+            print(n2)
+            NotificationCenter.default.removeObserver(n3)
+        }
+    }
+    
+    func testNotificationMessageNameUniqueness() {
+        
+        XCTAssertNotEqual(N1.notificationName(), N2.notificationName())
+        XCTAssertNotEqual(N2.notificationName(), N3.notificationName())
+    }
+    
+    func testNotificationMessageCreation() {
+        
+        let message = N1()
+        let object: AnyObject? = 5 as AnyObject
+        let notification = Notification(message: message, object: object)
+        
+        XCTAssertNotNil(notification.message)
+        XCTAssertTrue(notification.message is N1)
+        XCTAssertEqual(notification.name.rawValue, type(of: message).notificationName())
+        
+        XCTAssertNotNil(notification.object)
+    }
+    
+    func testSubscrptions() {
+        
+        self.performExpectation { (expectation) in
+            
+            expectation.add(conditions: [S1.notificationName(), S3.notificationName()])
+            
+            let s1: MessageSubscription = NotificationCenter.default.subscribe({ (s: S1) in
+                
+                expectation.fulfill(condition: type(of: s).notificationName())
+            })
+            
+            let s2: MessageSubscription = NotificationCenter.default.subscribe({ (s: S2) in
+                
+                XCTFail()
+            })
+            
+            let s3: MessageSubscription = NotificationCenter.default.subscribe({ (s: S3) in
+                
+                expectation.fulfill(condition: type(of: s).notificationName())
+            })
+            
+            NotificationCenter.default.publish(S1())
+            NotificationCenter.default.publish(S3())
+            
+            NotificationCenter.default.unsubscribe(from: s1)
+            print(s2)
+            NotificationCenter.default.unsubscribe(from: s3)
+        }
+    }
 }

@@ -53,7 +53,7 @@ public extension NotificationCenter {
     ///Posts a given message to the receiver.
     public func post(_ message: NSNotificationMessage, sender: AnyObject? = nil) {
         
-        let notification = Notification(name: message as! Notification.Name, object: sender)
+        let notification = Notification(message: message, object: sender)
         self.post(notification)
     }
 }

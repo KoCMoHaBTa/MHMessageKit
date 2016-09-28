@@ -29,6 +29,7 @@
 		30DF3A6D1CA71BE700E6068A /* NSNotificationCenter+MessageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD31C88F4F000F7FB6C /* NSNotificationCenter+MessageSubscriber.swift */; };
 		30DF3A6E1CA71BE700E6068A /* NSNotificationQueue+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D1BD51C88F4F000F7FB6C /* NSNotificationQueue+MessagePublisher.swift */; };
 		30DF3A6F1CA71BE700E6068A /* NSNotificationCenter+MessagePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303867F81CA02FF400BE4552 /* NSNotificationCenter+MessagePublisher.swift */; };
+		9997A7301D9B9E1800B81C8D /* XCTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997A72F1D9B9E1800B81C8D /* XCTestExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		303D1BDD1C88F4F000F7FB6C /* WeakMessageSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakMessageSubscription.swift; sourceTree = "<group>"; };
 		303D1BF21C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+WeakObserver.m"; sourceTree = "<group>"; };
 		303D1BF31C88F63B00F7FB6C /* NSNotificationCenter+WeakObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+WeakObserver.h"; sourceTree = "<group>"; };
+		9997A72F1D9B9E1800B81C8D /* XCTestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		303520C81C88EE6500436351 /* MHMessageKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				9997A72F1D9B9E1800B81C8D /* XCTestExtensions.swift */,
 				303520C91C88EE6500436351 /* MHMessageKitTests.swift */,
 				303520CB1C88EE6500436351 /* Info.plist */,
 			);
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9997A7301D9B9E1800B81C8D /* XCTestExtensions.swift in Sources */,
 				303520CA1C88EE6500436351 /* MHMessageKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

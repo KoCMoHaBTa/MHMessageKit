@@ -13,7 +13,7 @@ public extension NotificationQueue {
     ///Adds a message to the notification queue with a specified sender and  posting style.
     public func enqueue(_ message: NSNotificationMessage, sender: AnyObject? = nil, postingStyle: NotificationQueue.PostingStyle = .whenIdle) {
         
-        let notification = Notification(name: message as! Notification.Name, object: sender)
+        let notification = Notification(message: message, object: sender)
         self.enqueue(notification, postingStyle: postingStyle)
     }
 }
