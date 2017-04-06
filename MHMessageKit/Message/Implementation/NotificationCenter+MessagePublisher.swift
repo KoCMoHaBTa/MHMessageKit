@@ -16,7 +16,7 @@ extension NotificationCenter: MessagePublisher {
         let message = message as? NotificationMessage
         else {
             
-            NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
+            NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only messages that also conform to NotificationMessage are supported", userInfo: nil).raise()
             return
         }
         

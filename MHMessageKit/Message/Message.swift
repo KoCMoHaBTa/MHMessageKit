@@ -8,6 +8,7 @@
 
 import Foundation
 
+///A type that can be send and received trough publishers and subscibers.
 public protocol Message {
     
 }

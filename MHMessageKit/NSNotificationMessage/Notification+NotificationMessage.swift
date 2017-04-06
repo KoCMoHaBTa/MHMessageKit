@@ -1,5 +1,5 @@
 //
-//  NSNotification+NSNotificationMessage.swift
+//  NSNotification+NotificationMessage.swift
 //  MHMessageKit
 //
 //  Created by Milen Halachev on 1/15/16.
@@ -12,33 +12,23 @@ public extension Notification {
     
     private struct UserInfoKey {
         
-        static let Message = "NSNotification.UserInfoKey.Message"
+        static let message = "NSNotification.UserInfoKey.message"
     }
     
+    ///The message transported by the Notification
     public var message: NotificationMessage? {
         
-        return self.userInfo?[Notification.UserInfoKey.Message] as? NotificationMessage
+        return self.userInfo?[Notification.UserInfoKey.message] as? NotificationMessage
     }
     
+    ///Creates an isntance of the receiver with a message and object
+    ///- parameter message: The message to transport.
+    ///- parameter object: The object for the new notification.
     public init(message: NotificationMessage, object: AnyObject? = nil) {
         
         let name = type(of: message).notificationName()
+        let userInfo = [Notification.UserInfoKey.message: message]
         
-        var userInfo = [AnyHashable: Any]()
-        userInfo[Notification.UserInfoKey.Message] = message
-        
-        self.init(name: Notification.Name(rawValue: name), object: object, userInfo: userInfo)
+        self.init(name: name, object: object, userInfo: userInfo)
     }
-    
-//    ///A Generic method that tries to create and return a NSNotificationMessage instance from the current NSNotification object
-//    public func message<M where M: NSNotificationMessage>() -> M? {
-//        
-//        return self.message(M) as? M
-//    }
-//    
-//    ///A Generic method that tries to create and return a NSNotificationMessage instance of a provided type from the current NSNotification object
-//    public func message(type: NSNotificationMessage.Type) -> NSNotificationMessage? {
-//        
-//        return type.init()
-//    }
 }

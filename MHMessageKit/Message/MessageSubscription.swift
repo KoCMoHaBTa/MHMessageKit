@@ -8,7 +8,11 @@
 
 import Foundation
 
-///You should explicitly unsubscribe from this subscription
+/**
+ A type that represents a message subscription.
+ - note: You must explicitly unsubscribe from this subscription.
+ */
+
 public protocol MessageSubscription {
     
 }

@@ -8,13 +8,17 @@
 
 import Foundation
 
+///A type that statically register and unregister subscriptions.
+///If the type also conforms to StaticSubscriptionContainer and/or StaticWeakSubscriptionContainer - there is default implementation for the required methods
 public protocol StaticMessageHandler {
     
     associatedtype RegistrationInput
-        
+    
+    ///Perform subscription registration for a given subscriber and input
     static func registerSubscriptions<S>(from subscriber: S, input: RegistrationInput)
     where S: MessageSubscriber
     
+    ///Perform subscription unregistration for a given subscriber
     static func unregisterSubscriptions<S>(from subscriber: S)
     where S: MessageSubscriber
 }

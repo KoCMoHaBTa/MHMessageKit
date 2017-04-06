@@ -8,6 +8,7 @@
 
 import Foundation
 
+///A type that stores weak subscriptions statically
 public protocol StaticWeakSubscriptionContainer {
     
     static var weakSubscriptions: [WeakMessageSubscription] {get set}

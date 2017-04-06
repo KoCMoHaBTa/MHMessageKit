@@ -97,13 +97,13 @@
 
 @implementation NSNotificationCenter (WeakObserver)
 
--(void)addWeakObserver:(id)observer selector:(SEL)selector name:(NSString *)name object:(id)object {
+-(void)addWeakObserver:(id)observer selector:(SEL)selector name:(NSNotificationName)name object:(id)object {
     
     NSNotificationCenterWeakObserver *weakObserver = [[NSNotificationCenterWeakObserver alloc] initWithObserver:observer selector:selector name:name object:object];
     [weakObserver associateWithObserver:observer];
 }
 
--(id<NSObject>)addWeakObserverForName:(NSString *)name object:(id)obj queue:(NSOperationQueue *)queue usingBlock:(void (^)(NSNotification *))block {
+-(id<NSObject>)addWeakObserverForName:(NSNotificationName)name object:(id)obj queue:(NSOperationQueue *)queue usingBlock:(void (^)(NSNotification *))block {
     
     id<NSObject> observer = [self addObserverForName:name object:obj queue:queue usingBlock:block];
     

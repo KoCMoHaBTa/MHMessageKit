@@ -1,5 +1,5 @@
 //
-//  NSNotificationMessage.swift
+//  NotificationMessage.swift
 //  MHMessageKit
 //
 //  Created by Milen Halachev on 1/15/16.
@@ -12,15 +12,15 @@ import Foundation
 public protocol NotificationMessage {
     
     ///The underlying notification name that will be used by NSNotification, NSNotificationCenter and NSNotificationQueue to transfer the message. The value must be unique per type. There is a default implementation of this method that retrieves the reflecting type name.
-    static func notificationName() -> String
+    static func notificationName() -> Notification.Name
 }
 
 public extension NotificationMessage {
     
     ///A default implementation of this method that retrieves the reflecting type name.
-    public static func notificationName() -> String {
+    public static func notificationName() -> Notification.Name {
         
         let notificationName = String(reflecting: self)
-        return notificationName
+        return Notification.Name(rawValue: notificationName)
     }
 }

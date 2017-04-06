@@ -1,5 +1,5 @@
 //
-//  NSNotificationQueueNSNotificationMessage.swift
+//  NSNotificationQueue+NotificationMessage.swift
 //  MHMessageKit
 //
 //  Created by Milen Halachev on 1/15/16.
@@ -10,10 +10,15 @@ import Foundation
 
 public extension NotificationQueue {
     
-    ///Adds a message to the notification queue with a specified sender and  posting style.
-    public func enqueue(_ message: NotificationMessage, sender: AnyObject? = nil, postingStyle: NotificationQueue.PostingStyle = .whenIdle) {
+    /**
+     Adds a message to the notification queue with a specified sender and  posting style.
+     
+     - parameter message: The message to be send.
+     - parameter object: The object for the notification.
+     */
+    public func enqueue(_ message: NotificationMessage, object: AnyObject? = nil, postingStyle: NotificationQueue.PostingStyle = .whenIdle) {
         
-        let notification = Notification(message: message, object: sender)
+        let notification = Notification(message: message, object: object)
         self.enqueue(notification, postingStyle: postingStyle)
     }
 }

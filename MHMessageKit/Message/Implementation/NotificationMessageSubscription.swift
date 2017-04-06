@@ -20,6 +20,7 @@ struct NotificationMessageSubscription: MessageSubscription {
 
 struct NotificationWeakMessageSubscription: WeakMessageSubscription {
     
+    //automatic unsubscribe upon deallocation is handled trough the sbuscription process, using a weak observer
     let observer: NSObjectProtocol
     
     init(observer: NSObjectProtocol) {

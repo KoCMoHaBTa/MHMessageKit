@@ -11,13 +11,13 @@ import Foundation
 extension NotificationCenter: MessageSubscriber {
     
     public func subscribe<M>(_ handler: @escaping (_ message: M) -> Void) -> MessageSubscription
-    where M : Message {
+    where M: Message {
         
         guard
         let messageType = M.self as? NotificationMessage.Type
         else {
             
-            NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
+            NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only messages that also conform to NotificationMessage are supported", userInfo: nil).raise()
             return NotificationMessageSubscription(observer: "" as NSObjectProtocol)
         }
         
@@ -36,13 +36,13 @@ extension NotificationCenter: MessageSubscriber {
     }
     
     public func subscribe<M>(_ handler: @escaping (_ message: M) -> Void) -> WeakMessageSubscription
-    where M : Message {
+    where M: Message {
         
         guard
         let messageType = M.self as? NotificationMessage.Type
         else {
             
-            NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only NSNotificationMessage is supported", userInfo: nil).raise()
+            NSException(name: NSExceptionName.internalInconsistencyException, reason: "Only messages that also conform to NotificationMessage are supported", userInfo: nil).raise()
             return NotificationWeakMessageSubscription(observer: "" as NSObjectProtocol)
         }
         
@@ -64,7 +64,7 @@ extension NotificationCenter: MessageSubscriber {
         
         guard let subscription = subscription as? NotificationMessageSubscription else {
             
-            NSException(name: NSExceptionName.invalidArgumentException, reason: "Only subscriptions created by NSNotificationCenter are supported", userInfo: nil).raise()
+            NSException(name: NSExceptionName.invalidArgumentException, reason: "Only subscriptions created by NotificationCenter are supported", userInfo: nil).raise()
             return
         }
         

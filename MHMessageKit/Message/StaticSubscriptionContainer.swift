@@ -8,6 +8,7 @@
 
 import Foundation
 
+///A type that stores subscriptions statically
 public protocol StaticSubscriptionContainer {
     
     static var subscriptions: [MessageSubscription] {get set}

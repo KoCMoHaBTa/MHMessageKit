@@ -8,7 +8,12 @@
 
 import Foundation
 
-///This subscription will automatically unsubscribe itself when deallocated
+/**
+ A type that represents a weak message subscription.
+ - note: This subscription must automatically unsubscribe itself when deallocated.
+ */
+
+
 public protocol WeakMessageSubscription {
     
 }

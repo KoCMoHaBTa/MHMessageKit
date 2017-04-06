@@ -8,7 +8,9 @@
 
 import Foundation
 
+///A type that can send messages.
 public protocol MessagePublisher {
     
+    ///Publish a message.
     func publish(_ message: Message)
 }
