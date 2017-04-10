@@ -2,7 +2,16 @@
 
 [![Build Status](https://www.bitrise.io/app/e852e912fb99f260.svg?token=d5eturMQ4qsKk6BCVJt61w&branch=master)](https://www.bitrise.io/app/e852e912fb99f260)
 
-### Highlights
+## Installation
+
+[embedding]:
+https://developer.apple.com/library/content/technotes/tn2435/_index.html#//apple_ref/doc/uid/DTS40017543-CH1-PROJ_CONFIG-APPS_WITH_MULTIPLE_XCODE_PROJECTS
+
+- using [Carthage](https://github.com/Carthage/Carthage) by adding `github "KoCMoHaBTa/MHMessageKit"` to your `Cartfile`
+- by [downloading](https://github.com/KoCMoHaBTa/MHMessageKit/releases) and [embedding] the framework directly into your project
+- using [submodules](http://git-scm.com/docs/git-submodule) and [embedding] the framework directly into your project
+
+## Highlights
 
 - provides extensions of the Foundation's notification API for sending and receving strongly typed custom notifications that are really convinient to Swift
 - provides extensions of the Foundation's notification API for weakly subscribing to notifications, that are automatically unsubscribed when no longer used
