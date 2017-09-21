@@ -47,7 +47,7 @@ extension NotificationCenter {
             NotificationCenter.default.removeObserver(self)
         }
 
-        dynamic func received(notification: Notification) {
+        @objc dynamic func received(notification: Notification) {
             
             _ = self.observer.perform(self.selector, with: notification)
         }
