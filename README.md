@@ -1,6 +1,6 @@
 # MHMessageKit
 
-[![Build Status](https://www.bitrise.io/app/e852e912fb99f260.svg?token=d5eturMQ4qsKk6BCVJt61w&branch=master)](https://www.bitrise.io/app/e852e912fb99f260)
+[![Build Status](https://app.bitrise.io/app/081833065ad63e7a/status.svg?token=HMgRO7Myg0QWhkR77Oi3hg&branch=master)](https://app.bitrise.io/app/081833065ad63e7a)
 
 ## Installation
 
