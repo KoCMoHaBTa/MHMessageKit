@@ -15,7 +15,7 @@ public protocol NotificationMessage {
     static func notificationName() -> Notification.Name
 }
 
-public extension NotificationMessage {
+extension NotificationMessage {
     
     ///A default implementation of this method that retrieves the reflecting type name.
     public static func notificationName() -> Notification.Name {

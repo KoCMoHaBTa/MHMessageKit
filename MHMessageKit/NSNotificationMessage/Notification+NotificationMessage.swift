@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Notification {
+extension Notification {
     
     private struct UserInfoKey {
         

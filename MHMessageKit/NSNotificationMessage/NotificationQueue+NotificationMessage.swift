@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension NotificationQueue {
+extension NotificationQueue {
     
     /**
      Adds a message to the notification queue with a specified sender and  posting style.

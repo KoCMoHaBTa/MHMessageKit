@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension NotificationCenter {
+extension NotificationCenter {
     
     /**
      
@@ -69,7 +69,7 @@ public extension NotificationCenter {
     }
 }
 
-public extension NotificationCenter {
+extension NotificationCenter {
     
     /**
      Posts a given message to the receiver.

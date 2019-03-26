@@ -243,17 +243,17 @@
 				TargetAttributes = {
 					303520721C88EC4E00436351 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = "";
+						LastSwiftMigration = 1020;
 					};
 					303520C61C88EE6500436351 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = "";
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
 			buildConfigurationList = 3035206D1C88EC4E00436351 /* Build configuration list for PBXProject "MHMessageKit" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -458,7 +458,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -477,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.MHMessageKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -489,7 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.MHMessageKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -501,7 +501,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.MHMessageKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
