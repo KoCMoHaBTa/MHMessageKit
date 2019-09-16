@@ -69,6 +69,8 @@
 		9997A72F1D9B9E1800B81C8D /* XCTestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestExtensions.swift; sourceTree = "<group>"; };
 		99C59DF91E9B9AF700EC4DA7 /* NotificationCender+WeakObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCender+WeakObserver.swift"; sourceTree = "<group>"; };
 		E648E8FA217A2C3400FC15BA /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E64FF3BD232FCCFA00E24899 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		E64FF3BF232FCDEB00E24899 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E69BD70A21FC6B2A00605684 /* MHMessageKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MHMessageKit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,9 +96,11 @@
 		303520691C88EC4E00436351 = {
 			isa = PBXGroup;
 			children = (
+				E64FF3BF232FCDEB00E24899 /* .gitignore */,
 				303520AD1C88ED6000436351 /* README.md */,
 				E648E8FA217A2C3400FC15BA /* LICENSE */,
 				E69BD70A21FC6B2A00605684 /* MHMessageKit.podspec */,
+				E64FF3BD232FCCFA00E24899 /* Package.swift */,
 				303520751C88EC4E00436351 /* MHMessageKit */,
 				303520C81C88EE6500436351 /* MHMessageKitTests */,
 				303520741C88EC4E00436351 /* Products */,
@@ -383,6 +387,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -434,6 +439,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -454,6 +460,7 @@
 				INFOPLIST_FILE = MHMessageKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.MHMessageKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -474,6 +481,7 @@
 				INFOPLIST_FILE = MHMessageKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KoCMoHaBTa.MHMessageKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
