@@ -1,13 +1,10 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "MHMessageKit",
-    platforms: [
-        .iOS(.v8)
-    ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
@@ -25,12 +22,14 @@ let package = Package(
         .target(
             name: "MHMessageKit",
             dependencies: [],
-            path: "MHMessageKit"
+            path: "MHMessageKit",
+            exclude: ["Info.plist"]
         ),
         .testTarget(
             name: "MHMessageKitTests",
             dependencies: ["MHMessageKit"],
-            path: "MHMessageKitTests"
+            path: "MHMessageKitTests",
+            exclude: ["Info.plist"]
         ),
     ]
 )
