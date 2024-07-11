@@ -32,7 +32,7 @@ extension NotificationCenter {
         private let selector: Selector
         private let name: NSNotification.Name?
         private weak var object: AnyObject?
-        private var associatedKey: String = ""
+        private var associatedKey: Void?
         
         init(observer: Any, selector: Selector, name: NSNotification.Name?, object: Any?) {
             
